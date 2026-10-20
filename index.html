@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tuinman Coppes – Nette tuin, eerlijke prijs</title>
+<meta name="description" content="Tuinonderhoud in Wageningen en Bennekom: gras maaien, heggen snoeien, onkruid verwijderen en terras schoonmaken. Eerlijke prijs, vooraf afgesproken.">
+<style>
+:root{
+  --bg:#fbf8f1; --card:#ffffff; --text:#1f2a1f; --muted:#4a574a;
+  --green:#2f6b3a; --green-d:#214d29; --accent:#e9f2e4; --btn-text:#ffffff; --line:#d9e2d2;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141b14; --card:#1d261d; --text:#f1f5ee; --muted:#c3cfbf;
+    --green:#7cc58a; --green-d:#a6dcb0; --accent:#22301f; --btn-text:#0f1a10; --line:#33432f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141b14; --card:#1d261d; --text:#f1f5ee; --muted:#c3cfbf;
+  --green:#7cc58a; --green-d:#a6dcb0; --accent:#22301f; --btn-text:#0f1a10; --line:#33432f;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);color-scheme:light dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Georgia,"Times New Roman",serif;font-size:21px;line-height:1.6;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.2;margin:0 0 .5em}
+h1{font-size:clamp(2rem,6vw,3rem)}
+h2{font-size:clamp(1.6rem,4.5vw,2.1rem);color:var(--green-d)}
+h3{font-size:1.25rem;margin-bottom:.3em}
+p{margin:0 0 1em}
+.hero{background:var(--accent);padding:36px 0 32px;border-bottom:4px solid var(--green)}
+.brand{font-weight:bold;color:var(--green-d);margin-bottom:10px}
+.lead{font-size:1.25rem;color:var(--muted);max-width:34em}
+.btn{display:inline-block;background:var(--green);color:var(--btn-text);text-decoration:none;font-weight:bold;font-size:1.35rem;padding:16px 28px;border-radius:14px;margin:6px 10px 6px 0;border:3px solid var(--green)}
+.btn.alt{background:transparent;color:var(--green-d)}
+.btn:focus-visible{outline:4px solid var(--text);outline-offset:3px}
+.bigphone{display:block;font-size:clamp(1.9rem,7vw,2.8rem);font-weight:bold;color:var(--green-d);text-decoration:none;margin:4px 0 14px}
+section{padding:36px 0}
+.alt-bg{background:var(--accent)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:20px}
+.card .ico{font-size:2rem;display:block}
+.card p{margin:0;color:var(--muted);font-size:1.05rem}
+.card ul{margin:.4em 0 0;padding-left:1.2em;color:var(--muted);font-size:1.05rem}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;display:flex;gap:16px;align-items:flex-start;margin-bottom:18px}
+.steps li::before{content:counter(s);flex:none;width:46px;height:46px;border-radius:50%;background:var(--green);color:var(--btn-text);font-weight:bold;display:grid;place-items:center;font-size:1.3rem}
+.price{background:var(--card);border-left:8px solid var(--green);border:2px solid var(--line);border-left:8px solid var(--green);border-radius:16px;padding:22px 24px}
+.price .amount{font-size:2.2rem;font-weight:bold;color:var(--green-d)}
+.price ul{margin:.6em 0 0;padding-left:1.2em}
+.price li{margin-bottom:.3em}
+.contact{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:24px}
+.callbar{position:fixed;left:0;right:0;bottom:0;background:var(--green);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));text-align:center;z-index:10}
+.callbar a{color:var(--btn-text);font-weight:bold;font-size:1.4rem;text-decoration:none;display:block}
+footer{padding:12px 0 28px;text-align:center;color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">🌿 Tuinman Coppes</div>
+    <h1>Een nette tuin, zonder dat u zich hoeft in te spannen</h1>
+    <p class="lead">Ik ben Simon en ik help u graag met uw tuin in Wageningen en Bennekom. Betrouwbaar, vriendelijk en voor een eerlijke prijs.</p>
+    <a class="bigphone" href="tel:+31683457709">📞 06 83 45 77 09</a>
+    <a class="btn" href="tel:+31683457709">Bel mij gerust</a>
+    <a class="btn alt" href="https://wa.me/31683457709">Of stuur mij een appje</a>
+  </div>
+</header>
+
+<main>
+<section id="diensten">
+  <div class="wrap">
+    <h2>Waar ik u mee help</h2>
+    <div class="grid">
+      <div class="card"><span class="ico">🌱</span><h3>Tuinonderhoud</h3>
+        <ul><li>Gras maaien</li><li>Heggen snoeien</li><li>Bomen en struiken snoeien</li><li>Onkruid verwijderen</li><li>Borders en planten verzorgen</li></ul></div>
+      <div class="card"><span class="ico">🍂</span><h3>Tuin opknappen</h3>
+        <ul><li>Achterstallig onderhoud</li><li>Overwoekerde tuin aanpakken</li><li>Dode takken en oude planten weghalen</li><li>Tuinafval opruimen en afvoeren</li></ul></div>
+      <div class="card"><span class="ico">💦</span><h3>Schoonmaken</h3>
+        <ul><li>Terras en tuinpaden</li><li>Oprit</li><li>Tuinmeubelen</li></ul>
+        <p style="margin-top:.6em">Ik gebruik hiervoor mijn hogedrukreiniger.</p></div>
+      <div class="card"><span class="ico">🍁</span><h3>Per seizoen</h3>
+        <ul><li>Voorjaarsbeurt</li><li>Bladeren ruimen in de herfst</li><li>Tuin winterklaar maken</li></ul></div>
+      <div class="card"><span class="ico">🔧</span><h3>Kleine klusjes</h3>
+        <ul><li>Hekje of plantenbak plaatsen</li><li>Kleine schutting herstellen</li><li>Tuinmeubels verplaatsen</li><li>Tuin leegruimen bij een verhuizing</li></ul></div>
+    </div>
+    <p style="margin-top:20px">Staat uw klus er niet bij? Vraag het gerust. Ik denk graag met u mee.</p>
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="wrap">
+    <h2>Zo werkt het</h2>
+    <ol class="steps">
+      <li><div><strong>U belt of appt mij.</strong><br>Vertel kort wat u in de tuin gedaan wilt hebben.</div></li>
+      <li><div><strong>Ik kom vrijblijvend langs.</strong><br>We bekijken samen de tuin en u hoort vooraf wat het kost.</div></li>
+      <li><div><strong>Ik regel het op de afgesproken dag.</strong><br>Daarna laat ik de tuin netjes achter.</div></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="price">
+      <h2 style="margin-bottom:.1em">Eén duidelijk tarief</h2>
+      <div class="amount">€13 per uur</div>
+      <ul>
+        <li>Gratis en vrijblijvende inschatting vooraf</li>
+        <li>Geen voorrijkosten in Wageningen</li>
+        <li>Groenafval neem ik mee of ik ruim het netjes op</li>
+        <li>Bij een grote klus spreken we ook een vast bedrag af</li>
+        <li>Betalen kan contant of per overboeking</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="wrap">
+    <h2>Waarom kiezen voor mij</h2>
+    <div class="grid">
+      <div class="card"><h3>Betrouwbaar</h3><p>Afspraak is afspraak. Ik kom op tijd en laat de tuin altijd netjes achter.</p></div>
+      <div class="card"><h3>Dichtbij</h3><p>Ik werk in Wageningen en Bennekom, ben snel ter plekke en flexibel in te plannen.</p></div>
+      <div class="card"><h3>Meedenkend</h3><p>Twijfelt u wat uw tuin nodig heeft? Ik denk gewoon met u mee, zonder verkooppraatjes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Zal ik uw tuin eens bekijken?</h2>
+      <p>Bel mij of stuur een bericht met uw adres en wat u graag gedaan wilt hebben. Ik kom vrijblijvend langs en reageer meestal dezelfde dag.</p>
+      <a class="bigphone" href="tel:+31683457709">📞 06 83 45 77 09</a>
+      <a class="btn alt" href="https://wa.me/31683457709">WhatsApp</a>
+      <a class="btn alt" href="mailto:tuinmancoppes@gmail.com">E-mail</a>
+      <p style="margin:12px 0 0;color:var(--muted);font-size:.95rem">Simon · tuinmancoppes@gmail.com · Wageningen en Bennekom</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© Tuinman Coppes</footer>
+
+<div class="callbar"><a href="tel:+31683457709">📞 Bel nu: 06 83 45 77 09</a></div>
+</body>
+</html>
